@@ -36,6 +36,6 @@ if (process.env.NODE_ENV === "production") {
 app.use("/api/user", require("./api/User"));
 //app.use("/api/auth", require("./api/auth"));
 
-const port = process.env.Port || 5000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`server is is started on port ${port}`));
