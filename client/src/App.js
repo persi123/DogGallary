@@ -36,7 +36,7 @@ function App(props) {
   const ToDetails = () => {
     if (isAuth) {
       // return <Redirect to="/details" />;
-      props.history.push("/home");
+      props.history.push("/");
       console.log(isAuth);
     } else {
       props.history.push("/");
