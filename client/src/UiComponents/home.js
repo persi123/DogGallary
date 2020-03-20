@@ -3,7 +3,7 @@ import "./home.css";
 import Axios from "axios";
 import { useState } from "react";
 import { withRouter } from "react-router";
-import { auth } from "../action/tokenverify";
+
 import { ImageData } from "../action/loadImage";
 import { connect } from "react-redux";
 
