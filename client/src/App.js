@@ -20,23 +20,27 @@ import Logout from "./Components/Logout";
 
 function App(props) {
   const [isAuth, setisAuth] = useState("");
-  const user = useSelector(state => state.auth.isAuthenticated);
+  const user = useSelector(state => state.auth.token);
+  // useEffect(() => {
+  //   // store.dispatch(loadUser());
+  // }, []);
+
+  // useEffect(() => {
+  //   setisAuth(user);
+  // });
+
   useEffect(() => {
-    store.dispatch(loadUser());
+    // console.log(Nde-env)
+    console.log(props);
+    ToDetails();
+    console.log("effect");
   }, []);
 
-  useEffect(() => {
-    setisAuth(user);
-  });
-
-  useEffect(() => {
-    ToDetails();
-  }, [isAuth]);
-
   const ToDetails = () => {
-    if (isAuth) {
-      // return <Redirect to="/details" />;
-      props.history.push("/");
+    if (user !== null) {
+      console.log(user);
+      store.dispatch(loadUser());
+      props.history.push("/home");
       console.log(isAuth);
     } else {
       props.history.push("/");

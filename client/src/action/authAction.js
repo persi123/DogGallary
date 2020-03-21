@@ -5,12 +5,10 @@ import Axios from "axios";
 export const loadUser = () => (dispatch, getState) => {
   //user loading
   //dispatch({ type: "USER_LOADING" });
-  Axios.get("/api/user/login", tokenConfig(getState)).then(res =>
-    dispatch({
-      type: "USER_LOADED",
-      payload: res.data
-    })
-  );
+
+  dispatch({
+    type: "USER_LOADED"
+  });
 };
 
 // register user

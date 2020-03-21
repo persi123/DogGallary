@@ -51,8 +51,7 @@ function Register(props) {
 
   const ToDetails = () => {
     if (isAuth) {
-      // return <Redirect to="/details" />;
-      props.history.push("/details");
+      props.history.push("/home");
       console.log(isAuth);
     }
   };
@@ -68,10 +67,11 @@ function Register(props) {
     </div>
   );
 }
-const mapStateToProps = state => {
-  return {
-    isAuthenticated: state.auth.isAuthenticated
-  };
-};
 
-export default connect(mapStateToProps, { register })(withRouter(Register));
+// const mapStateToProps = state => {
+//   return {
+//     isAuthenticated: state.auth.isAuthenticated
+//   };
+// };
+
+export default connect(null, { register })(withRouter(Register));
