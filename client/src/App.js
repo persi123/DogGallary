@@ -21,19 +21,9 @@ import Logout from "./Components/Logout";
 function App(props) {
   const [isAuth, setisAuth] = useState("");
   const user = useSelector(state => state.auth.token);
-  // useEffect(() => {
-  //   // store.dispatch(loadUser());
-  // }, []);
-
-  // useEffect(() => {
-  //   setisAuth(user);
-  // });
 
   useEffect(() => {
-    // console.log(Nde-env)
-    console.log(props);
     ToDetails();
-    console.log("effect");
   }, []);
 
   const ToDetails = () => {

@@ -6,14 +6,6 @@ import PropsTypes from "prop-types";
 import { withRouter } from "react-router";
 
 function Logout(props) {
-  useEffect(() => {
-    // props.logout();
-
-    console.log("logout");
-  }, []);
-
-  // useEffect(() => {}, []);
-
   const LOgoutSession = () => {
     props.history.push("/");
     props.logout();

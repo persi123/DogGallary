@@ -3,15 +3,15 @@ import RegisterModal from "../UiComponents/Register";
 import { useState, useEffect } from "react";
 import { connect, useSelector } from "react-redux";
 import { register } from "../action/authAction";
-import { withRouter, Redirect } from "react-router-dom";
-// import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
+
 
 function Register(props) {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [isAuth, setisAuth] = useState("");
   const user = useSelector(state => state.auth.isAuthenticated);
-  //   useDebugName("email");
+
 
   const [password, setpassword] = useState("");
   const [submitData, setsubmitData] = useState({

@@ -14,18 +14,13 @@ function Home(props) {
     Axios.get("https://dog.ceo/api/breeds/list/all").then(res => {
       setlist(res.data.message);
       document.querySelector(".lists").style.overflowY = "scroll";
-      console.log(list);
     });
   }
   function Item(element) {
     setdog(element);
     document.querySelector(".inputbox").textContent = element;
-    console.log(document.querySelector(".inputbox").value);
-    console.log(props);
   }
   const Search = () => {
-    // props.match.params({ dog });
-    console.log(dog);
     props.ImageData(dog);
     localStorage.setItem("breed", dog);
     props.history.push("/details");

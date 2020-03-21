@@ -21,28 +21,12 @@ function Navbar(props) {
         {" "}
         <h1>doggy</h1>
       </Link>
-      {/* <ul
-          className="d-flex justify-content-between "
-          style={{ listStyle: "none", width: "25%" }}
-        >
-          <li>Register</li>
-          <li>login</li>
-          <li>logout</li>
-        </ul> */}
+
       <div style={{ cursor: "pointer", color: "white" }}>
-        {/* <Link to="/details" style={{ color: "azure" }}>
-          Rendom image
-        </Link> */}
         {isAuth ? <Logout /> : null}
       </div>
     </nav>
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    isAuthenticated: state.auth.isAuthenticated
-  };
-};
-
-export default connect(mapStateToProps, null)(withRouter(Navbar));
+export default connect(null, null)(withRouter(Navbar));

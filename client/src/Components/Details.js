@@ -7,14 +7,11 @@ import { connect } from "react-redux";
 import { ImageData } from "../action/loadImage";
 
 function Details(props) {
-  const [image, setimage] = useState("");
-
   useEffect(() => {
     const dog = localStorage.getItem("breed");
     console.log(dog);
     props.ImageData(dog);
-    console.log("useEffect");
-  }, [1]);
+  }, []);
 
   return (
     <div>
@@ -23,10 +20,4 @@ function Details(props) {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    image: state.image.image
-  };
-};
-
-export default connect(mapStateToProps, { ImageData })(withRouter(Details));
+export default connect(null, { ImageData })(withRouter(Details));
